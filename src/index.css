@@ -1,0 +1,10 @@
+@import "tailwindcss";
+*{
+  font-family:initial;
+}
+:root {
+  --darkblue: #37353E;
+  --iceblue:#D3DAD9;
+  --navyblue:#17313E;
+  --lightcream:#FFF2EF;
+}
