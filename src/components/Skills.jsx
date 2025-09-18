@@ -1,0 +1,9 @@
+import React from 'react'
+
+const Skills = () => {
+  return (
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique a tempore aut dolor perferendis, nam expedita odio debitis, explicabo totam, nesciunt modi? Tenetur at qui, voluptate adipisci, laudantium dignissimos impedit sapiente ab ipsam explicabo vitae doloremque enim hic distinctio rem eaque expedita consequuntur nostrum accusamus unde nobis nulla. Accusantium odio perspiciatis aspernatur, eveniet quas voluptate ipsum harum. Rem, distinctio! Quasi dolorem distinctio quo neque molestiae non sapiente accusamus dolore rerum, consequuntur repudiandae, numquam ipsam sequi quis vel eius! Accusantium consequatur dolorum facilis dolores! Enim quia officia corrupti ab doloremque asperiores error similique deleniti veritatis quo exercitationem fugit expedita non vero voluptates quasi deserunt id modi, nihil blanditiis! Id quam totam voluptas amet velit. Consequatur, ut quidem quo, itaque temporibus similique non sunt officiis cumque id facilis sed? Ex nobis aspernatur doloremque rem corporis, consequuntur harum alias eveniet ut, nulla fugiat nesciunt molestias fuga, ipsa maiores tempora quaerat repellat. Tempore, corrupti quisquam? Assumenda quas dicta nihil tempore accusamus ducimus repellat perferendis, velit voluptatum quo vel molestiae recusandae, nobis accusantium sapiente dolorum dolores, magnam animi quisquam ab laborum sint. Repellat, in! Fugiat consequuntur dolores officia nemo neque molestias officiis, qui quia vel deserunt pariatur modi. Nobis, sit adipisci. Corporis ea deleniti distinctio?</div>
+  )
+}
+
+export default Skills
