@@ -4,12 +4,15 @@
 }
 :root {
   --darkblue: #37353E;
-  --iceblue:#D3DAD9;
   --navyblue:#17313E;
-  --lightcream:#FFF2EF;
+  --lightblue:#6ce4ff;
+  --lightcream:#F3E9DC;
   --lightgray:#EBECF1;
   --lightpurple:#B33791;
   --lightpink:#700334;
   --middlepink:#150208;
   --darkpink:#96034a;
+  --brown:#1C0A00;
+  --lightbrown:#715A5A;
+  --darkbrown:#322C2B;
 }

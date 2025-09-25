@@ -26,10 +26,10 @@ createRoot(document.getElementById("root")).render(
         />
         <Route path="projects" element={<Projects />} />
         <Route path="skills" element={<Skills />} />
-        <Route path="about-me" element={<AboutMe />} />
-        <Route path="contact-me" element={<ContactMe />} />
-        <Route path="sign-in" element={<SignIn />} />
-        <Route path="sign-up" element={<SignUp />} />
+        <Route path="aboutme" element={<AboutMe />} />
+        <Route path="contactme" element={<ContactMe />} />
+        <Route path="signin" element={<SignIn />} />
+        <Route path="signup" element={<SignUp />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </HashRouter>

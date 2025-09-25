@@ -7,16 +7,16 @@ import logo from "../images/reyhane.webp";
 const MainPage = () => {
   const githubPagesBase = "/first-react";
   const homeRef = useRef(null);
-  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
+  const navItems = ["Home", "AboutMe", "Skills", "Projects", "ContactMe"];
   return (
     <div className="w-full">
       <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-[var(--darkpink)] via-[var(--middlepink)] to-black
  backdrop-blur-md text-white shadow-lg z-50">
-        <div className="flex items-center justify-between px-10">
+        <div className="flex items-center justify-between px-6 sm:px-10">
           <div className="flex items-center">
-            <img src={logo} alt="Logo" className="w-20 h-20 object-contain filter brightness-90 contrast-100" />
+            <img src={logo} alt="Logo" className="w-20 h-20 object-contain filter brightness-90 contrast-100 hidden sm:block" />
           </div>
-          <ul className="flex justify-center space-x-8 py-4 font-semibold">
+          <ul className="flex justify-center space-x-5 sm:space-x-8 py-4 font-semibold">
             {navItems.map((item, index) => (
               <motion.li
                 key={item}
