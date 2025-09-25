@@ -12,18 +12,18 @@ const MainPage = () => {
     <div className="w-full">
       <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-[var(--darkpink)] via-[var(--middlepink)] to-black
  backdrop-blur-md text-white shadow-lg z-50">
-        <div className="flex items-center justify-between px-6 sm:px-10">
+        <div className="flex items-center justify-between pl-2 pr-4 sm:px-10">
           <div className="flex items-center">
             <img src={logo} alt="Logo" className="w-20 h-20 object-contain filter brightness-90 contrast-100 hidden sm:block" />
           </div>
-          <ul className="flex justify-center space-x-5 sm:space-x-8 py-4 font-semibold">
+          <ul className="flex justify-center space-x-4 sm:space-x-8 py-5 font-semibold">
             {navItems.map((item, index) => (
               <motion.li
                 key={item}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className="relative group cursor-pointer"
+                className="relative group cursor-pointer text-[14px] text-xl"
               >
                 <a
                   href={`#${item.toLowerCase()}`}
@@ -39,7 +39,7 @@ const MainPage = () => {
         </div>
       </nav>
       <div ref={homeRef}>
-        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white px-6 pt-5">
+        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white px-6 pt-22">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
