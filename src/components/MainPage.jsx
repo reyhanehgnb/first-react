@@ -1,98 +1,99 @@
 import React, { useRef } from "react";
-import pic1 from "../images/bg-photo.webp";
-import pic2 from "../images/logo.webp";
+import { ReactTyped } from "react-typed";
+import { motion } from "framer-motion";
+import profilePic from "../images/girl.webp";
+import logo from "../images/reyhane.webp"; 
 
 const MainPage = () => {
   const githubPagesBase = "/first-react";
   const homeRef = useRef(null);
+  const navItems = ["Home", "About", "Skills", "Projects", "Contact"];
   return (
     <div className="w-full">
-      <section>
-        <div className="relative w-full">
-          <img
-            src={pic1}
-            alt="Background"
-            className="absolute inset-0 w-full h-66 sm:h-90 md:h-119 lg:h-148.5 object-cover"
-          />
-          <div className="absolute inset-0 bg-black opacity-60 h-66 sm:h-90 md:h-119 lg:h-148.5"></div>
-
-          <div className="flex flex-row justify-around">
-            <img
-              className="relative w-12 h-11 sm:w-17 md:w-25 lg:w-31 sm:h-15 md:h-20 lg:h-28 z-10"
-              src={pic2}
-              alt="logo"
-            />
-            <div className="relative z-10 flex flex-row px-1 py-4 sm:h-15 md:h-18 lg:h-22.5 sm:p-5 md:p-6 lg:p-9 gap-10 sm:gap-26 md:gap-40 lg:gap-50 text-[10px] sm:text-[15px] lg:text-[19px]">
-              <div>
-                <ul className="flex flex-row items-center space-x-3 sm:space-x-7 md:space-x-8 lg:space-x-9">
-                  <li
-                    className="cursor-pointer text-gray-50 hover:text-[var(--lightpurple)] transition-colors duration-300"
-                    onClick={() =>
-                      homeRef.current.scrollIntoView({ behavior: "smooth" })
-                    }
-                  >
-                    Home
-                  </li>
-                  <li className="text-gray-50 hover:text-[var(--lightpurple)] cursor-pointer transition-colors duration-300">
-                    <a
-                      href={`${githubPagesBase}/#/projects`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Projects
-                    </a>
-                  </li>
-
-                  <li className="text-gray-50 hover:text-[var(--lightpurple)] cursor-pointer transition-colors duration-300">
-                    <a
-                      href={`${githubPagesBase}/#/skills`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Skills
-                    </a>
-                  </li>
-
-                  <li className="text-gray-50 hover:text-[var(--lightpurple)] cursor-pointer transition-colors duration-300">
-                    <a
-                      href={`${githubPagesBase}/#/about-me`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      About Me
-                    </a>
-                  </li>
-
-                  <li className="text-gray-50 hover:text-[var(--lightpurple)] cursor-pointer transition-colors duration-300">
-                    <a
-                      href={`${githubPagesBase}/#/contact-me`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Contact Me
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              <div>
-                <button className="bg-[var(--lightgray)] px-1.5 py-0.5 sm:px-2.5 sm:py-1 md:px-3.5 md:py-1 lg:px-5.5 lg:py-0.5 rounded-2xl hover:bg-[var(--lightpurple)] hover:text-gray-100 transition-colors duration-300 float-left">
-                  Sign In
-                </button>
-              </div>
-            </div>
+      <nav className="fixed top-0 left-0 w-full bg-gradient-to-r from-[var(--darkpink)] via-[var(--middlepink)] to-black
+ backdrop-blur-md text-white shadow-lg z-50">
+        <div className="flex items-center justify-between px-10">
+          <div className="flex items-center">
+            <img src={logo} alt="Logo" className="w-20 h-20 object-contain filter brightness-90 contrast-100" />
           </div>
+          <ul className="flex justify-center space-x-8 py-4 font-semibold">
+            {navItems.map((item, index) => (
+              <motion.li
+                key={item}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.2 }}
+                className="relative group cursor-pointer"
+              >
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="transition-colors duration-300"
+                >
+                  {item}
+                </a>
 
-          <div className="relative z-10 flex flex-col items-center justify-center h-40 sm:h-60 md:h-90 lg:h-120">
-            <h1 className="text-white text-3xl md:text-6xl font-bold mb-4">
-              Welcome to My Website
-            </h1>
-            <p className="text-white text-lg md:text-2xl">
-              You are here to get to know me.
-            </p>
-          </div>
+                <span className="absolute left-0 -bottom-1 w-0 h-0.5  bg-[var(--lightpink)] transition-all duration-300 group-hover:w-full"></span>
+              </motion.li>
+            ))}
+          </ul>
         </div>
-      </section>
+      </nav>
+      <div ref={homeRef}>
+        <div className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white px-6 pt-5">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="text-center md:text-left md:w-1/2"
+          >
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">  
+              Hi, I’m <span className="text-[var(--lightpink)]">Reyhane</span>
+            </h1>
+
+            <h2 className="text-2xl md:text-4xl font-semibold mb-6">
+              <ReactTyped
+                strings={[
+                  "Web Developer 💻",
+                  "Creative Designer 🎨",
+                  "Problem Solver 🧩",
+                  "Dreamer ✨",
+                ]}
+                typeSpeed={60}
+                backSpeed={40}
+                loop
+              />
+            </h2>
+
+            <p className="text-lg text-gray-300 mb-6 max-w-md">
+              Passionate about building interactive, user-friendly web
+              experiences with a touch of creativity and clean design.
+            </p>
+
+            <motion.a
+              href="#projects"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-block bg-[var(--lightpink)] hover:bg-[var(--darkpink)] text-white font-medium py-3 px-6 rounded-full shadow-lg transition"
+            >
+              View My Work
+            </motion.a>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            className="mt-10 md:mt-0 md:ml-10"
+          >
+            <motion.img
+              src={profilePic}
+              alt="Reyhane"
+              className="w-64 h-64 object-cover rounded-full border-4 border-[var(--lightpink)] shadow-2xl"
+              animate={{ y: [0, -15, 0] }}
+              transition={{ repeat: Infinity, duration: 3 }}
+            />
+          </motion.div>
+        </div>
+      </div>
     </div>
   );
 };
