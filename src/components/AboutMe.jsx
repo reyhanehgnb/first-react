@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import pic1 from "../images/about.jpg";
+import pic1 from "../images/about.webp";
 
 const AboutMe = () => {
   return (
@@ -18,11 +18,53 @@ const AboutMe = () => {
           className="p-6 md:p-10 max-w-xl text-white"
         >
           <h2 className="text-3xl/normal md:text5xl/normal lg:text-7xl/normal font-semibold mb-4 text-white  ml-0 md:ml-20 lg:ml-30">
-            I<br /> was born on <br /> June16,2007
+            I<br /> was born on <br /> 2007
           </h2>
         </motion.div>
       </div>
-      <div className="w-full py-12 px-6 sm:px-12 md:px-20 bg-[var(--lightcream)] text-white">
+      <div className="w-full py-16 px-6 sm:px-12 md:px-20 bg-[var(--lightcream)] text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto flex flex-col justify-center items-center pb-20"
+        >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-[var(--brown)]">
+            Personal Life
+          </h2>
+
+          <div className="space-y-6">
+            <div className="bg-[var(--darkbrown)] p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <p className="text-sm sm:text-base text-gray-300">
+                Hi, I'm Reyhaneh, a passionate Front-End Developer based in{" "}
+                <span className="font-semibold text-[var(--lightblue)]">
+                  Qazvin,Iran
+                </span>
+                .
+                <br /> I enjoy building responsive and user-friendly web
+                interfaces using HTML, CSS, JavaScript, and React.
+                <br /> I'm constantly learning and improving my skills to create
+                better web experiences.
+                <br /> My{" "}
+                <span className="font-semibold text-[var(--lightblue)]">
+                  English
+                </span>{" "}
+                level is{" "}
+                <span className="font-semibold text-[var(--lightblue)]">
+                  B1
+                </span>
+                , which allows me to understand technical documentation,
+                communicate clearly, and collaborate <br /> effectively on
+                projects. . <br />I have been learning since{" "}
+                <span className="font-semibold text-[var(--lightblue)]">
+                  2022
+                </span>{" "}
+                and my level is .
+              </p>
+            </div>
+          </div>
+        </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,14 +88,26 @@ const AboutMe = () => {
               </p>
             </div>
             <div className="bg-[var(--darkbrown)] p-6 rounded-2xl shadow-md hover:shadow-lg transition">
+              <h3 className="text-xl font-semibold">University</h3>
+              <p className="text-sm sm:text-base text-gray-300">
+                I'm a computer engineering student at <span className="font-semibold text-[var(--lightblue)]">
+                  Qazvin Islamin Azad University
+                </span>
+                .
+              </p>
+            </div>
+            <div className="bg-[var(--darkbrown)] p-6 rounded-2xl shadow-md hover:shadow-lg transition">
               <h3 className="text-xl font-semibold">Programming Learning</h3>
               <p className="text-sm sm:text-base text-gray-300">
                 I have completed the{" "}
                 <span className="font-semibold text-[var(--lightblue)]">
                   HtmlCss,JavaScript and React{" "}
                 </span>{" "}
-                courses at <a href="https://jedu.ir" className="underline">Jedu</a>. <br />I have
-                passed the{" "}
+                courses at{" "}
+                <a href="https://jedu.ir" className="underline">
+                  Jedu
+                </a>
+                . <br />I have passed the{" "}
                 <span className="font-semibold text-[var(--lightblue)]">
                   {" "}
                   HtmlCss

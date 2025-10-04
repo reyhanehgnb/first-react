@@ -6,8 +6,8 @@ import {
   FaJsSquare,
   FaReact,
   FaGithub,
+  FaGitAlt ,
 } from "react-icons/fa";
-
 const skills = [
   {
     name: "HTML",
@@ -33,6 +33,11 @@ const skills = [
     name: "GitHub",
     level: 60,
     icon: <FaGithub className="text-gray-700 w-12 h-12" />,
+  },
+  {
+    name: "Git",
+    level: 60,
+    icon: <FaGitAlt className="text-orange-700 w-12 h-12" />,
   },
 ];
 const Skills = () => {
