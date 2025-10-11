@@ -6,7 +6,7 @@ import {
   FaJsSquare,
   FaReact,
   FaGithub,
-  FaGitAlt ,
+  FaGitAlt,
 } from "react-icons/fa";
 const skills = [
   {
@@ -109,14 +109,14 @@ const Skills = () => {
           </motion.div>
         ))}
       </div>
-        <motion.a
-          href="#home"
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.95 }}
-          className=" bg-gray-900 hover:bg-[var(--darkblue)] text-white font-medium m-10 py-4 px-7 rounded-full shadow-lg transition"
-        >
-          Back to home
-        </motion.a>
+      <motion.a
+        href="#home"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.95 }}
+        className=" bg-gray-900 hover:bg-[var(--darkblue)] text-white font-medium m-10 py-4 px-7 rounded-full shadow-lg transition"
+      >
+        Back to home
+      </motion.a>
     </div>
   );
 };
