@@ -56,11 +56,7 @@ const AboutMe = () => {
                 </span>
                 , which allows me to understand technical documentation,
                 communicate clearly, and collaborate <br /> effectively on
-                projects. . <br />I have been learning since{" "}
-                <span className="font-semibold text-[var(--lightblue)]">
-                  2022
-                </span>{" "}
-                and my level is .
+                projects.
               </p>
             </div>
           </div>
@@ -143,7 +139,7 @@ const AboutMe = () => {
             href="#home"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className=" bg-[var(--darkblue)] hover:bg-[var(--lightbrown)] text-white font-medium m-10 py-3 px-6 rounded-full shadow-lg transition"
+            className=" bg-[var(--darkbrown)] hover:bg-[var(--lightbrown)] text-white font-medium m-10 py-3 px-6 rounded-full shadow-lg transition"
           >
             Back to home
           </motion.a>

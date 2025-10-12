@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Mail, MapPin, Eye, EyeOff } from "lucide-react";
+import pic1 from '../images/contactme.webp'
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -25,7 +26,6 @@ const ContactMe = () => {
 
   return (
     <section className="min-h-[80vh] flex flex-col lg:flex-row bg-gray-50 text-gray-900">
-      {/* Left: Form */}
       <motion.div
         className="flex-1 flex flex-col justify-center px-8 py-5 lg:px-16"
         initial={{ opacity: 0, x: -40 }}
@@ -39,7 +39,6 @@ const ContactMe = () => {
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Name */}
           <div>
             <label className="block font-medium mb-1 text-[var(--darkbrown)]">Name</label>
             <input
@@ -52,8 +51,6 @@ const ContactMe = () => {
               className="w-full border rounded-2xl px-4 py-1.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
             />
           </div>
-
-          {/* Email */}
           <div>
             <label className="block font-medium mb-1 text-[var(--darkbrown)]">Email</label>
             <input
@@ -66,8 +63,6 @@ const ContactMe = () => {
               className="w-full border rounded-2xl px-4 py-1.5 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
             />
           </div>
-
-          {/* Password */}
           <div className="relative">
             <label className="block font-medium mb-1 text-[var(--darkbrown)]">Password</label>
             <input
@@ -126,7 +121,7 @@ const ContactMe = () => {
             type="submit"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
-            className="w-full bg-blue-600 text-white py-2.5 rounded-2xl font-semibold shadow hover:bg-blue-700 transition-all"
+            className="w-full bg-[var(--darkbrown)] text-white py-2.5 rounded-2xl font-semibold shadow hover:bg-[var(--lightbrown)] transition-all"
           >
             Send Message
           </motion.button>
@@ -136,7 +131,7 @@ const ContactMe = () => {
         className="relative flex-1 flex flex-col justify-center items-center text-white bg-cover bg-center p-6 rounded-l-3xl"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1200&q=80')",
+            `url(${pic1})`,
         }}
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
