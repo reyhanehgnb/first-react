@@ -43,7 +43,6 @@ const skills = [
 const Skills = () => {
   const circleRadius = 40;
   const circumference = 2 * Math.PI * circleRadius;
-
   return (
     <div className="relative min-h-screen bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 flex flex-col items-center justify-center py-20 overflow-hidden">
       <div className="absolute w-full h-full top-0 left-0 pointer-events-none">
